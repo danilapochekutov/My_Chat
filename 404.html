@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <script>
-    window.location.replace("/My_Chat/login");
-  </script>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Получаем текущий путь и перенаправляем на index.html с этим путём
+        const segment = 1;
+        const path = window.location.pathname.split('/').slice(0, 1 + segment).join('/');
+        window.location.href = path + '/index.html';
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=/" />
+    </noscript>
 </head>
-<body></body>
+<body>
+    Redirecting...
+</body>
 </html>
