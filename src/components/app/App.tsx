@@ -9,7 +9,7 @@ import Louder from "../louder/Louder";
 
 function App() {
 	const auth = getAuth();
-	const [user, loading, error] = useAuthState(auth);
+	const [loading] = useAuthState(auth);
 
 	return (
 		<Router basename="/My_Chat"> {/* Для корректной работы при обновлении страницы */}
