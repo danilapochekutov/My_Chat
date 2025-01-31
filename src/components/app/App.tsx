@@ -12,7 +12,7 @@ function App() {
 	const [user, loading, error] = useAuthState(auth);
 
 	return (
-		<Router>
+		<Router basename="/My_Chat"> {/* Для корректной работы при обновлении страницы */}
 			{loading ? (
 				<Louder />
 			) : (
