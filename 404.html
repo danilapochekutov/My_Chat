@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecting...</title>
   <script>
-    var pathname = window.location.pathname.replace(/^\/My_Chat/, '');
-    window.location.replace("/My_Chat/index.html?redirect=" + pathname);
+    // Получаем текущий путь
+    const segment = 1;
+    const path = window.location.pathname.split('/').slice(0, 1 + segment).join('/');
+
+    // Перенаправляем на index.html с сохранением пути
+    window.location.href = path + '/index.html';
   </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/" />
+  </noscript>
 </head>
 <body>
 </body>
