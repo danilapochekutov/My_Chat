@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
   <script>
-    window.location.replace("/My_Chat/index.html" + window.location.search + window.location.hash);
+    var pathname = window.location.pathname.replace(/^\/My_Chat/, '');
+    window.location.replace("/My_Chat/index.html?redirect=" + pathname);
   </script>
 </head>
 <body>
